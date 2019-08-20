@@ -1,0 +1,13 @@
+Errores de compilación:
+-En la línea 9 no reconocía "booleaN" por lo que lo cambié a "boolean"
+-En la línea 9 la variable boolean tenía un valor de 0 el cual no reconoce, por lo que lo cambie a false
+-En la línea 10 el valor que tenía ochoBits estaba fuera de rango, por lo que de 128 lo cambié a 127
+-En la línea 11 el valor que tenía dieciseisBits estaba fuera de rango, por lo que de -32769 lo cambié a -32768
+-En la línea 14 se le agregó un valor incorrecto a x1 (long), por lo que se lo cambié por "double"
+-En la línea 14 la variable "Discriminante" no la reconoció por lo que la cambie a "discriminante" 
+-En la línea 17 no reconocía "Char" por lo que lo cambié por "char"
+-En la línea 18 no reconoció la variable "ch" por lo que la cambié por "ch1"
+-En la línea 18 no acepta el valor "w", por lo que lo cambié por 'w'
+
+Error de ejecución:
+-En la línea 19 se presentaba un división por cero, por lo que cambie la variable "a" por la "b"
