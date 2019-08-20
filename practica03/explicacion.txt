@@ -1,0 +1,3 @@
+EXplicaciones:
+-En la segunda parte, en el programa de PrePost.java, la razón por la que nos arroja dos veces el número 17 es porque a la hora de escribir el operador "x--" en lugar de "--x", lo que interpreta, es que se imprima primero el valor de "x" y una vez impreso, en la siguiente impresion cuando aparezca la "x", esta tendrá una unidad menos por la resta que se quedó pendiente.
+-En la tercera parte, en el programa de Operadores.java, a la hora de ejecutarlo nos arroja dos valores distintos como resultado, a pesar de que los valores del divisor y el dividendo son los mismos, la diferencia es que uno tiene como tipo de dato "int" (lo que nos arroja el resultado en entero) y el otro lo tiene como "double" (lo que nos arroja un entero con decimales). 
