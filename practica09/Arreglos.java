@@ -15,9 +15,10 @@ public class Arreglos {
 	    if (k == arr[i]){
 		return i;
 	    }
+	}
         return -1;
 	}
-    }
+    
 
     /**
      * Regresa el mayor entero de un arreglo. Puedes suponer que arr contiene al menos un elemento.
@@ -30,10 +31,10 @@ public class Arreglos {
 	for (int i = 0; i <= arr.length-1; i ++){
 	    if (arr[i] > maximo) {
 		maximo = arr[i];
-	    }
+        }
+    }
         return maximo;
 	}
-    }
 
     /**
      * Determina si existen dos elementos consecutivos en el arreglo dado que sumen a k.
@@ -43,8 +44,13 @@ public class Arreglos {
      */
     public static boolean consecutivos(int[] arr, int k) {
         // Implementar
-	for (int i = 0; i < arr.length-1; i ++)  
-	    return (arr[i] + arr[i+1]==k);
+    boolean a = false;
+	for (int i = 0; i < arr.length-1; i ++){ 
+        if (arr[i] + arr[i+1]==k);{
+            a = true;
+        }   
+    }
+    return a;
     }
     /**
      * Determina la suma de todos los elemento en un arreglo
