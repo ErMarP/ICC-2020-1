@@ -17,11 +17,11 @@ public class Peon extends Pieza {
             if (this.obtenerPosicion().obtenerFila() == 6 && fila - 2 <= 7) {
                 jugadas.add(new Posicion(fila - 2, columna));
             }
-                if (fila - 1 >= 0 && columna - 1 >= 0) {
+            if (fila - 1 >= 0 && columna - 1 >= 0) {
                 jugadas.add(new Posicion(fila - 1, columna - 1));
             }
-            if (columna + 1 <= 7 && fila + 1 >= 7) {
-                jugadas.add(new Posicion(fila + 1, columna + 1));
+            if (columna + 1 <= 7 && fila - 1 >= 0) {
+                jugadas.add(new Posicion(fila - 1, columna + 1));
             }
             if (fila - 1 <= 7) {
                 jugadas.add(new Posicion(fila - 1, columna));
@@ -33,10 +33,10 @@ public class Peon extends Pieza {
             if (fila + 1 <= 7 && columna + 1 <= 7) {
                 jugadas.add(new Posicion(fila + 1, columna + 1));
             }
-            if (columna - 1 >= 0 && fila - 1 >= 0) {
-                jugadas.add(new Posicion(fila - 1, columna - 1));
+            if (columna - 1 >= 0 && fila + 1 <= 7) {
+                jugadas.add(new Posicion(fila + 1, columna - 1));
             }
-            if (fila + 1 >= 0) {
+            if (fila + 1 >= 7) {
                 jugadas.add(new Posicion(fila + 1, columna));
             }
         }
