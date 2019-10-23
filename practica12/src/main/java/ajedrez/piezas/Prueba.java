@@ -1,1 +1,0 @@
-package ajedrez.piezas;
