@@ -26,8 +26,7 @@ public class Peon extends Pieza {
             if (fila - 1 >= 0) {
                 jugadas.add(new Posicion(fila - 1, columna));
             }
-        }
-        if(this.obtenerColor() == Color.NEGRO) {
+        }else{
             if (this.obtenerPosicion().obtenerFila() == 1) {
                  jugadas.add(new Posicion(fila + 2, columna));
             }
