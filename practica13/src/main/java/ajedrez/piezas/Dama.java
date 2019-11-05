@@ -30,18 +30,16 @@ public class Dama extends Pieza {
             }
         }
 
-        for (int i = fila + 1; i <= 7; i ++){
-            for (int j = columna + 1; j <= 7; j ++){
-                Pieza h = tab.obtenerPieza(i, j);
-                if(h == null){
-                    jugadas.add(new Posicion(fila + i, columna + j));
+        for (int i = fila,j = columna; i <= 7 && j <= 7; i ++, j ++){
+            Pieza h = tab.obtenerPieza(i, j);
+            if(h == null){
+                jugadas.add(new Posicion(fila + i, columna + j));
+            }else{
+                if(this.obtenerColor() == h.obtenerColor()){
+                    break;
                 }else{
-                    if(this.obtenerColor() == h.obtenerColor()){
-                        break;
-                    }else{
-                        jugadas.add(new Posicion(fila + (h.obtenerPosicion().obtenerFila()), columna + h.obtenerPosicion().obtenerColumna())); 
-                        break;                     
-                    }
+                    jugadas.add(new Posicion(fila + (h.obtenerPosicion().obtenerFila()), columna + h.obtenerPosicion().obtenerColumna())); 
+                    break;                     
                 }
             }
         } 
@@ -60,18 +58,16 @@ public class Dama extends Pieza {
             }
         }
 
-        for (int i = fila - 1; i >= 0; i --){
-            for (int j = columna - 1; j >= 0; j --){
-                Pieza e = tab.obtenerPieza(i, j);
-                if(e == null){
-                    jugadas.add(new Posicion(fila - i, columna - j));                 
+        for (int i = fila,j = columna; i >= 0 && j >= 0; i --, j --){
+            Pieza e = tab.obtenerPieza(i, j);
+            if(e == null){
+                jugadas.add(new Posicion(fila - i, columna - j));                 
+            }else{
+                if(this.obtenerColor() == e.obtenerColor()){
+                    break;
                 }else{
-                    if(this.obtenerColor() == e.obtenerColor()){
-                        break;
-                    }else{
-                        jugadas.add(new Posicion(fila - (e.obtenerPosicion().obtenerFila()), columna - e.obtenerPosicion().obtenerColumna())); 
-                        break;                     
-                    }
+                    jugadas.add(new Posicion(fila - (e.obtenerPosicion().obtenerFila()), columna - e.obtenerPosicion().obtenerColumna())); 
+                    break;                     
                 }
             }
         }
@@ -91,18 +87,16 @@ public class Dama extends Pieza {
 
         } 
 
-        for (int i = fila - 1; i >= 0; i --){
-            for (int j = columna + 1; j <= 7; j ++){
-                Pieza c = tab.obtenerPieza(i, j);
-                if(c == null){
-                    jugadas.add(new Posicion(fila - i, columna + j));       
+        for (int i = fila,j = columna; i >= 0 && j <= 7; i --, j ++){
+            Pieza c = tab.obtenerPieza(i, j);
+            if(c == null){
+                jugadas.add(new Posicion(fila - i, columna + j));       
+            }else{
+                if(this.obtenerColor() == c.obtenerColor()){
+                    break;
                 }else{
-                    if(this.obtenerColor() == c.obtenerColor()){
-                        break;
-                    }else{
-                        jugadas.add(new Posicion(fila - (c.obtenerPosicion().obtenerFila()), columna + c.obtenerPosicion().obtenerColumna())); 
-                        break;                     
-                    }
+                    jugadas.add(new Posicion(fila - (c.obtenerPosicion().obtenerFila()), columna + c.obtenerPosicion().obtenerColumna())); 
+                    break;                     
                 }
             }
         }
@@ -116,22 +110,21 @@ public class Dama extends Pieza {
                     break;
                 }else{
                     jugadas.add(new Posicion(fila, columna + (b.obtenerPosicion().obtenerFila()))); 
+                    break;
                 }
             }
         }   
         
-        for (int i = fila + 1; i <= 7; i ++){
-            for (int j = columna - 1; j >= 0; j --){
-                Pieza a = tab.obtenerPieza(i, j);
-                if(a == null){
-                    jugadas.add(new Posicion(fila + i, columna - j));                 
+        for (int i = fila,j = columna; i <= 7 && j >= 0; i ++, j --){
+            Pieza a = tab.obtenerPieza(i, j);
+            if(a == null){
+                jugadas.add(new Posicion(fila + i, columna - j));                 
+            }else{
+                if(this.obtenerColor() == a.obtenerColor()){
+                    break;
                 }else{
-                    if(this.obtenerColor() == a.obtenerColor()){
-                        break;
-                    }else{
-                        jugadas.add(new Posicion(fila + (a.obtenerPosicion().obtenerFila()), columna - a.obtenerPosicion().obtenerColumna()));   
-                        break;                   
-                    }
+                    jugadas.add(new Posicion(fila + (a.obtenerPosicion().obtenerFila()), columna - a.obtenerPosicion().obtenerColumna()));   
+                    break;                   
                 }
             }
         }
