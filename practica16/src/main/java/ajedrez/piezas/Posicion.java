@@ -1,6 +1,8 @@
 package ajedrez.piezas;
 
-public class Posicion {
+import java.io.Serializable;
+
+public class Posicion implements Serializable{
 
     private int fila;
     private int columna;

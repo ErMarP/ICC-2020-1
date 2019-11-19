@@ -1,8 +1,9 @@
 package ajedrez.piezas;
 
+import java.io.Serializable;
 import java.util.List;
 
-public abstract class Pieza {
+public abstract class Pieza implements Serializable{
 
     private Color color;
     private Posicion posicion;
