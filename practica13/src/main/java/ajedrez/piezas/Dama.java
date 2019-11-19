@@ -98,6 +98,8 @@ public class Dama extends Pieza {
                     jugadas.add(new Posicion(fila - (c.obtenerPosicion().obtenerFila()), columna + c.obtenerPosicion().obtenerColumna())); 
                     break;                     
                 }
+        for (int i = fila,j = columna; i <= 7 && j <= 7; i ++, j ++){
+            jugadas.add(new Posicion(fila + i, columna + j));
             }
         }
 
